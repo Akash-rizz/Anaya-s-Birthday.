@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#09060f">
+<meta name="description" content="A little universe made with love for Anaya's 17th birthday.">
+<title>ANAYA — A Little Universe of Her Own ✦</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#09060f;--plum:#1b0c20;--rose:#ff9bcf;--rose2:#f05cae;--gold:#f2d6a0;--ivory:#fff5f8;--muted:#d7bfd0;--line:rgba(255,185,220,.25);--glass:rgba(28,12,31,.68)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--ink)}body{margin:0;color:var(--ivory);font-family:'DM Sans',sans-serif;background:radial-gradient(ellipse at 50% -15%,#55203f 0%,#211025 37%,#09060f 76%);min-height:100vh;overflow-x:hidden}button{font:inherit}button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+#universe{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.92}#dust,#petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}.dust{position:absolute;border-radius:50%;background:#fff4fb;box-shadow:0 0 9px #ffb7e1;animation:blink var(--d,3s) ease-in-out infinite;opacity:.35}@keyframes blink{50%{opacity:1;transform:scale(1.7)}}.petal{position:absolute;bottom:-35px;animation:drift var(--t,8s) linear forwards;color:var(--rose);filter:drop-shadow(0 0 7px #ff7ec8)}@keyframes drift{0%{transform:translate3d(0,0,0) rotate(0);opacity:0}12%{opacity:.75}100%{transform:translate3d(var(--x,20px),-115vh,0) rotate(330deg);opacity:0}}
+main{position:relative;z-index:2}.scene{display:none;min-height:100svh;align-items:center;justify-content:center;padding:38px 18px calc(42px + env(safe-area-inset-bottom));text-align:center}.scene.on{display:flex;animation:appear 1s cubic-bezier(.2,.8,.2,1) both}@keyframes appear{from{opacity:0;transform:translateY(18px) scale(.99);filter:blur(5px)}to{opacity:1;transform:none;filter:none}}.inner{width:min(100%,760px);margin:auto}.kicker{font-size:.67rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:700}.serif{font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:-.025em}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(3.5rem,15vw,7.7rem);line-height:.86;margin:26px 0;background:linear-gradient(130deg,#fff7fb 8%,#ffb5db 42%,#f0d8a4 68%,#f68ac5 92%);background-clip:text;-webkit-background-clip:text;color:transparent;text-shadow:0 12px 55px #ff78c41a}h2{font-size:clamp(2.6rem,10vw,5.1rem);line-height:.98;margin:18px 0 24px}h3{font-family:'Cormorant Garamond',serif;font-size:1.75rem;color:#ffd5e9;margin:0 0 10px}.script{font-family:'Great Vibes',cursive;color:#ffabd5;font-size:clamp(2rem,7vw,3.5rem);line-height:1.2}.copy{font-size:clamp(.98rem,2.8vw,1.12rem);line-height:1.95;color:var(--muted);max-width:610px;margin:0 auto 28px}.small{font-size:.85rem;color:#c4a5b9;line-height:1.8}.rule{height:1px;width:100px;margin:24px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}.emblem{width:112px;height:112px;border:1px solid #d79abf88;border-radius:50%;display:grid;place-items:center;margin:0 auto 26px;box-shadow:0 0 0 9px #ff9bcf08,0 0 60px #ff6ab733;position:relative;background:radial-gradient(circle at 35% 30%,#79345e,#210d28 72%);animation:floaty 5s ease-in-out infinite}.emblem:before,.emblem:after{content:"";position:absolute;inset:-9px;border:1px solid #f2d6a044;border-radius:50%;transform:rotateX(65deg) rotateZ(20deg)}.emblem:after{transform:rotateX(65deg) rotateZ(-55deg)}.emblem span{font-size:2.6rem;filter:drop-shadow(0 0 15px #ff8bc7)}@keyframes floaty{50%{transform:translateY(-8px)}}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;border-radius:999px;padding:14px 22px;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;font-weight:700;cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s}.btn:hover{transform:translateY(-3px)}.primary{border:1px solid #ffd0e7;background:linear-gradient(115deg,#ffd0e7,#f486c2 54%,#d99be9);color:#2b0c22;box-shadow:0 9px 35px #ff71bd29}.secondary{border:1px solid var(--line);background:#ffffff06;color:#ffe9f4}.btnrow{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}.seal{font-size:.7rem;letter-spacing:.14em;color:#f2d6a0a8;margin-top:30px}.glass{border:1px solid var(--line);background:linear-gradient(145deg,rgba(75,31,64,.64),rgba(18,9,23,.84));box-shadow:0 25px 90px #0006,inset 0 1px #ffffff0d;backdrop-filter:blur(18px);border-radius:26px;padding:clamp(23px,6vw,48px);text-align:left;position:relative;overflow:hidden}.glass:before{content:"";position:absolute;left:8%;right:8%;top:0;height:1px;background:linear-gradient(90deg,transparent,#f2d6a0aa,transparent)}.letter-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px;color:var(--gold);font-size:.67rem;letter-spacing:.18em;text-transform:uppercase}.letter p{font-family:'Cormorant Garamond',serif;font-size:clamp(1.18rem,3.7vw,1.48rem);line-height:1.65;color:#f5dfe9;margin:0 0 18px}.letter .signature{font-family:'Great Vibes',cursive;color:#ffacd5;font-size:2.2rem;margin:24px 0 0}.wishes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:27px 0}.wish{min-height:145px;padding:19px 15px;border-radius:19px;text-align:left;color:var(--ivory);border:1px solid #ffadd52a;background:linear-gradient(145deg,#2a142cdd,#100a16ee);cursor:pointer;transition:.3s;position:relative;overflow:hidden}.wish:after{content:"✦";position:absolute;right:13px;top:10px;color:#f2d6a088}.wish:hover{transform:translateY(-4px);border-color:#ff9bcf88;box-shadow:0 12px 35px #ff68ba15}.wish .icon{font-size:1.4rem;display:block;margin-bottom:12px}.wish strong{display:block;color:#ffd5e8;font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;margin-bottom:7px}.wish span{display:block;color:#d6b9cb;font-size:.83rem;line-height:1.65}.wish.wide{grid-column:1/-1;min-height:112px}.orbit-wrap{width:min(82vw,340px);height:min(82vw,340px);margin:22px auto 28px;position:relative;display:grid;place-items:center}.orbit{position:absolute;inset:8%;border:1px solid #f5b9dd55;border-radius:50%;transform:rotateX(65deg) rotateZ(-20deg);box-shadow:0 0 30px #ff8bc70a}.orbit.two{inset:0;transform:rotateX(70deg) rotateZ(48deg);border-color:#f2d6a044}.planet{width:38%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 25%,#ffdbed 0%,#f38ac4 19%,#8d3b82 49%,#25102e 76%);box-shadow:inset -17px -14px 28px #090611aa,0 0 50px #ed7cc466;animation:planet 7s ease-in-out infinite;position:relative}.planet:after{content:"";position:absolute;inset:13% 4%;border:2px solid #f8d7e7a6;border-radius:50%;transform:rotate(-28deg) scaleX(1.55);box-shadow:0 0 15px #ff9bcf55}.orbit-dot{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 20px var(--gold);top:13%;left:23%}@keyframes planet{50%{transform:translateY(-7px) rotate(8deg);filter:hue-rotate(8deg)}}.gift{font-size:5.6rem;display:inline-block;cursor:pointer;filter:drop-shadow(0 0 25px #ff8bc777);animation:giftFloat 2.8s ease-in-out infinite;user-select:none}.gift:active{transform:scale(.94)}@keyframes giftFloat{50%{transform:translateY(-12px) rotate(4deg)}}.final-message{display:none;margin:24px auto 0;text-align:left;max-width:590px}.final-message.open{display:block;animation:appear .9s both}.final-message p{line-height:1.9;color:#f4d8e7}.counter{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:23px 0}.counter span{padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#f6d5e6;font-size:.72rem;letter-spacing:.08em}.footer{margin-top:30px;font-size:.68rem;letter-spacing:.13em;color:#b493a9}.topmark{position:fixed;z-index:4;top:calc(14px + env(safe-area-inset-top));left:0;right:0;display:flex;justify-content:center;pointer-events:none}.topmark span{padding:8px 13px;border:1px solid #ffb9dc25;border-radius:99px;background:#1109159c;backdrop-filter:blur(10px);font-size:.62rem;letter-spacing:.22em;color:#eac9db}.progress{position:fixed;z-index:6;bottom:0;left:0;height:2px;width:0;background:linear-gradient(90deg,#f2d6a0,#ff8bc7,#c8a4ff);transition:width .5s}.audio-note{font-size:.73rem;color:#bda0b6;margin-top:16px}.toast{position:fixed;z-index:8;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#2b142c;border:1px solid var(--line);border-radius:99px;padding:11px 16px;color:#ffe8f4;font-size:.8rem;transition:.3s;max-width:90vw}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:440px){.scene{padding-left:16px;padding-right:16px}.wishes{gap:9px}.wish{padding:15px 12px;min-height:150px}.glass{border-radius:22px}.topmark span{font-size:.56rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<canvas id="universe" aria-hidden="true"></canvas><div id="dust"></div><div id="petals"></div>
+<div class="topmark"><span>A LITTLE UNIVERSE · MADE FOR ANAYA</span></div><div class="progress" id="progress"></div><div class="toast" id="toast"></div>
+<main>
+<section class="scene on" id="scene1"><div class="inner">
+<div class="emblem"><span>✧</span></div><div class="kicker">A little universe of her own</div>
+<h1 class="serif">For Anaya,<br><i>with love.</i></h1>
+<p class="copy">Some surprises are wrapped in ribbons. This one is made of stardust, a few honest words, and a little time spent creating something just for you.</p>
+<div class="rule"></div><p class="script">Ready, birthday girl?</p>
+<button class="btn primary" onclick="go(2)">Enter your universe <span>✦</span></button>
+<div class="seal">A SMALL CORNER OF THE INTERNET · JUST FOR YOU</div>
+</div></section>
+<section class="scene" id="scene2"><div class="inner">
+<div class="kicker">Tonight, the stars have a little announcement</div>
+<div class="orbit-wrap" aria-hidden="true"><div class="orbit"></div><div class="orbit two"></div><div class="orbit-dot"></div><div class="planet"></div></div>
+<div class="script">the world got a little brighter</div><h1 class="serif">Happy 17th<br>Birthday, Anaya.</h1>
+<p class="copy">Seventeen candles. A whole new chapter. So many versions of you still waiting to bloom. I hope this year meets you gently, surprises you beautifully, and reminds you that there is so much good still ahead.</p>
+<div class="counter"><span>♡ MORE JOY</span><span>✦ MORE PEACE</span><span>❀ MORE YOU</span></div>
+<button class="btn primary" onclick="go(3)">A letter from the heart <span>♡</span></button>
+</div></section>
+<section class="scene" id="scene3"><div class="inner">
+<div class="kicker">Not a perfect speech. Just honest words.</div><h2 class="serif">A little letter<br><i>for you.</i></h2>
+<div class="glass letter"><div class="letter-top"><span>For Anaya</span><span>28 · 10 · ♡</span></div>
+<p>Hey, birthday girl. 💗</p>
+<p>I wanted to make you something a little more personal than an ordinary birthday message—not because a website can ever hold every good thing I wish for you, but because you deserve a wish that feels like someone actually paused for a moment and thought about you.</p>
+<p>So here it is: I hope life is kind to you in the ways you need most. I hope you have days when your laughter comes easily, nights when your mind finally feels quiet, and people who make you feel safe enough to be completely yourself. I hope you never have to shrink your personality, hide your feelings, or pretend to be okay just to make the world more comfortable.</p>
+<p>And when life doesn't go the way you hoped, I hope you remember that a hard chapter is not a failed story. You are allowed to take your time. You are allowed to change, to learn, to start again, and to become someone you haven't even imagined yet. Please give yourself the same patience and kindness you so freely deserve.</p>
+<p>I'm glad our paths crossed in this huge, noisy world. Out of all the people we could have passed by online, somehow we became friends—and that's a little thing I genuinely appreciate. I hope this friendship brings you smiles, comfort, silly moments, and the freedom to be your real self, without pressure to be anything other than you.</p>
+<p>For your seventeenth year, I wish you quiet confidence, beautiful surprises, dreams that feel possible, and a future that makes you proud of the person you're becoming. More than anything, I hope you feel loved by life—not just on your birthday, but on all the random days in between, too.</p>
+<p class="signature">Keep your light, Anaya. The world is big, and your story is only beginning. ♡</p>
+</div><div class="btnrow"><button class="btn primary" onclick="go(4)">A few wishes, just for you ✧</button></div>
+</div></section>
+<section class="scene" id="scene4"><div class="inner">
+<div class="kicker">Five little wishes, tucked into the stars</div><h2 class="serif">For the days<br><i>still to come.</i></h2><p class="copy">Choose a star. Each one holds something I hope finds its way to you this year.</p>
+<div class="wishes">
+<button class="wish" onclick="wish(this,'HAPPINESS','I hope you collect little moments that make you smile long after they have passed. May joy find you in ordinary places, not only on special days.')"><span class="icon">🌷</span><strong>Happiness</strong><span>Tap to open your wish</span></button>
+<button class="wish" onclick="wish(this,'PEACE','I hope your heart gets room to breathe. May you find calm when life is loud, rest when you need it, and the courage to protect your peace.')"><span class="icon">🌙</span><strong>Peace</strong><span>Tap to open your wish</span></button>
+<button class="wish" onclick="wish(this,'DREAMS','May the dreams you keep quietly to yourself become plans, then progress, then stories you tell with a proud smile. I hope you never stop imagining more.')"><span class="icon">🦋</span><strong>Dreams</strong><span>Tap to open your wish</span></button>
+<button class="wish" onclick="wish(this,'SELF-WORTH','On days when you doubt yourself, I hope you remember that you never need to be perfect to be worthy of respect, care, and good things.')"><span class="icon">💗</span><strong>Self-worth</strong><span>Tap to open your wish</span></button>
+<button class="wish wide" onclick="wish(this,'YOUR NEXT CHAPTER','May the person you become feel like someone you are proud to know. May your future hold genuine people, brave choices, unexpected beauty, and a thousand reasons to think: I am glad I kept going.')"><span class="icon">✨</span><strong>Your next chapter</strong><span>Tap to open your wish</span></button>
+</div><button class="btn primary" onclick="go(5)">There is one last surprise <span>🎁</span></button>
+</div></section>
+<section class="scene" id="scene5"><div class="inner">
+<div class="kicker">A final little thing, before you go</div><h2 class="serif">A gift for<br><i>the birthday girl.</i></h2><p class="copy">It isn't wrapped in paper, but there's a little message inside. Tap the gift to open it. 🎀</p>
+<div class="gift" role="button" tabindex="0" aria-label="Open the birthday gift" onclick="openGift()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openGift()}">🎁</div>
+<div class="final-message glass" id="finalMessage"><div class="letter-top"><span>One last wish</span><span>With care · ♡</span></div>
+<h3>Happy 17th Birthday, Anaya. ✨</h3>
+<p>When the candles are gone and the birthday messages slow down, I hope the good feeling stays. I hope the next 365 days bring you unexpected laughter, small victories that mean the world to you, people who celebrate the real you, and moments that remind you how much life still has to offer.</p>
+<p>Thank you for being my friend. I hope this tiny surprise gave you even a little of the happiness I wanted it to. No big speech can predict what this year will bring—but I can wish you a year that feels more like you, a little softer where it has been hard, brighter where you need hope, and full of new reasons to be excited for tomorrow.</p>
+<p style="color:#ffb6d9;font-family:'Cormorant Garamond',serif;font-size:1.45rem">You deserve good things, Anaya. Not just today. Always. ♡</p>
+<div class="script" style="text-align:right">— your friend 🎀</div></div>
+<div class="btnrow"><button class="btn secondary" onclick="go(1)">↺ Begin again</button><button class="btn primary" onclick="sprinkle()">Make a little wish ✦</button></div>
+<div class="footer">MADE WITH CARE · ANAYA'S LITTLE UNIVERSE · 28 OCTOBER</div>
+</div></section>
+</main>
+<script>
+/* 3D starfield: Three.js loads from CDN. If unavailable, the CSS starfield remains as a graceful fallback. */
+const dust=document.getElementById('dust');
+for(let i=0;i<110;i++){const d=document.createElement('i');d.className='dust';d.style.left=Math.random()*100+'%';d.style.top=Math.random()*100+'%';d.style.width=d.style.height=(Math.random()*2+1)+'px';d.style.setProperty('--d',(2+Math.random()*5)+'s');d.style.animationDelay=(Math.random()*5)+'s';dust.appendChild(d)}
+let sceneIndex=1;
+function go(n){document.querySelectorAll('.scene').forEach(s=>s.classList.remove('on'));document.getElementById('scene'+n).classList.add('on');sceneIndex=n;document.getElementById('progress').style.width=((n-1)/4*100)+'%';window.scrollTo({top:0,behavior:'smooth'});if(n===2)sprinkle(20)}
+function wish(btn,title,message){btn.innerHTML='<span class="icon">✦</span><strong>'+title+'</strong><span>'+message+'</span>';btn.style.borderColor='rgba(255,155,207,.7)';btn.style.background='linear-gradient(145deg,#45213e,#160c1c)';btn.disabled=true;petalBurst(3)}
+function openGift(){document.getElementById('finalMessage').classList.add('open');document.querySelector('.gift').textContent='💝';sprinkle(35);document.getElementById('toast').textContent='A little happiness, just for you ♡';document.getElementById('toast').classList.add('show');setTimeout(()=>document.getElementById('toast').classList.remove('show'),2600)}
+function petalBurst(n=1){for(let i=0;i<n;i++){setTimeout(()=>{const p=document.createElement('span');p.className='petal';p.textContent=['✦','♡','❀','✧','♥'][Math.floor(Math.random()*5)];p.style.left=(Math.random()*100)+'%';p.style.fontSize=(12+Math.random()*18)+'px';p.style.setProperty('--t',(5+Math.random()*5)+'s');p.style.setProperty('--x',(-70+Math.random()*140)+'px');document.getElementById('petals').appendChild(p);setTimeout(()=>p.remove(),11000)},i*55)}}
+function sprinkle(n=12){petalBurst(n)}
+setInterval(()=>{if(Math.random()>.5)petalBurst(1)},1800);
+</script>
+<script type="module">
+try{
+ const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+ const canvas=document.getElementById('universe');
+ const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:false,powerPreference:'low-power'});
+ renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.5));renderer.setSize(innerWidth,innerHeight);renderer.setClearColor(0x000000,0);
+ const scene=new THREE.Scene();const camera=new THREE.PerspectiveCamera(62,innerWidth/innerHeight,.1,100);camera.position.z=24;
+ const count=850,positions=new Float32Array(count*3),sizes=new Float32Array(count);
+ for(let i=0;i<count;i++){positions[i*3]=(Math.random()-.5)*55;positions[i*3+1]=(Math.random()-.5)*45;positions[i*3+2]=(Math.random()-.5)*35;sizes[i]=Math.random()}
+ const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));geometry.setAttribute('aSize',new THREE.BufferAttribute(sizes,1));
+ const material=new THREE.PointsMaterial({color:0xffb6dd,size:.075,transparent:true,opacity:.8,depthWrite:false});
+ const stars=new THREE.Points(geometry,material);scene.add(stars);
+ const orb=new THREE.Group();scene.add(orb);
+ const sphere=new THREE.Mesh(new THREE.IcosahedronGeometry(2.1,2),new THREE.MeshBasicMaterial({color:0x9c3b82,wireframe:true,transparent:true,opacity:.16}));orb.add(sphere);
+ const ringMat=new THREE.MeshBasicMaterial({color:0xf2d6a0,wireframe:true,transparent:true,opacity:.24});
+ const ring=new THREE.Mesh(new THREE.TorusGeometry(3.05,.008,3,120),ringMat);ring.rotation.x=1.12;ring.rotation.y=.35;orb.add(ring);
+ const ring2=new THREE.Mesh(new THREE.TorusGeometry(3.7,.006,3,120),new THREE.MeshBasicMaterial({color:0xff8bc7,wireframe:true,transparent:true,opacity:.14}));ring2.rotation.x=.5;ring2.rotation.y=-.7;orb.add(ring2);
+ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let pointerX=0,pointerY=0;
+ addEventListener('pointermove',e=>{pointerX=(e.clientX/innerWidth-.5)*.5;pointerY=(e.clientY/innerHeight-.5)*.35},{passive:true});
+ addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.5))});
+ function frame(t){if(!document.hidden){const time=t*.00012;if(!reduce){stars.rotation.y=time;stars.rotation.x=Math.sin(time)*.08;orb.rotation.y=time*1.7;orb.rotation.x=Math.sin(time)*.4;camera.position.x+=(pointerX-camera.position.x)*.015;camera.position.y+=(-pointerY-camera.position.y)*.015;camera.lookAt(0,0,0)}renderer.render(scene,camera)}requestAnimationFrame(frame)}
+ requestAnimationFrame(frame);
+}catch(e){console.log('3D effect unavailable; using the starfield fallback.')}
+</script>
+</body>
+</html>
